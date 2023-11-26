@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mysql:
+    image: sae51n2_mysql
+    build:
+      context: .
+      dockerfile: mysql/Dockerfile
+    #volumes:
+    #  - ./mysql/data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dolibarr_db
+      MYSQL_USER: dolibarr
+      MYSQL_PASSWORD: dolibarr
+
+  dolibarr:
+    image: sae51n2_dolibarr
+    build:
+      context: .
+      dockerfile: dolibarr/Dockerfile
+    ports:
+      - "8080:80"
+    dns:
+      - 8.8.8.8
+      - 8.8.4.4
