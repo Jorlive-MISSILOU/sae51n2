@@ -31,9 +31,9 @@ RUN wget https://downloads.sourceforge.net/project/dolibarr/Dolibarr%20ERP-CRM/1
     tar -zxvf dolibarr-18.0.3.tgz --strip-components=1 && \
     rm dolibarr-18.0.3.tgz && \
     # Le repertoire des documents
-    mkdir -p htdocs/documents && \
-    chmod 777 htdocs/documents && \
-    chown www-data:www-data htdocs/documents
+    mkdir -p /var/www/documents && \
+    chmod 777 /var/www/documents && \
+    chown www-data:www-data /var/www/documents
 
 RUN mkdir -p htdocs/conf/ && \
     touch htdocs/conf/conf.php && \
@@ -45,7 +45,7 @@ COPY dolibarr/conf.php htdocs/conf/conf.php
 RUN chmod 777 htdocs/conf/conf.php
 
 # Désactive la protection CSRF
-RUN sed -i 's/define\(CSRFCHECK_WITH_TOKEN, true\);/\/\/define\(CSRFCHECK_WITH_TOKEN, true\);/g' htdocs/main.inc.php
+#RUN sed -i 's/define\(CSRFCHECK_WITH_TOKEN, true\);/\/\/define\(CSRFCHECK_WITH_TOKEN, true\);/g' htdocs/main.inc.php
  
 # Copie la configuration personnalisée
 COPY dolibarr/dolibarr.conf /etc/apache2/sites-available/000-default.conf
