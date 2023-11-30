@@ -1,6 +1,6 @@
 <?php
 
-$dolibarr_main_url_root = 'http://localhost:8080/admin/index.php';
+$dolibarr_main_url_root = 'http://localhost';
 $dolibarr_main_document_root = '/var/www/html/htdocs';
 $dolibarr_main_data_root = '/var/www/documents';
 $dolibarr_main_db_host = 'sae51n2_mysql_1';
