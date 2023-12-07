@@ -1,0 +1,31 @@
+nom,client,code_client,address,zip,town,fk_pays,phone,email,default_lang
+Adidas,1,C001,'123 Rue de la Mode',75001,Paris,1,0123456789,client1@example.com,fr_FR
+Nike,2,C002,'456 Avenue du Sport',75002,Marseille,2,0987654321,client2@example.com,en_US
+Gucci,3,C003,'789 Boulevard de Luxe',75003,Lyon,3,9876543210,client3@example.com,es_ES
+Calvin Klein,4,C004,'101 Rue de la Couture',75004,Nice,1,1234567890,client4@example.com,fr_FR
+Zara,5,C005,'202 Avenue Fashion',75005,Toulouse,2,2345678901,client5@example.com,en_US
+H&M,6,C006,'303 Rue des Tendances',75006,Bordeaux,3,3456789012,client6@example.com,es_ES
+Prada,7,C007,'404 Boulevard de la Haute Couture',75007,Strasbourg,1,4567890123,client7@example.com,fr_FR
+Louis Vuitton,8,C008,'505 Rue du Chic',75008,Lille,2,5678901234,client8@example.com,en_US
+Chanel,9,C009,'606 Avenue des Accessoires',75009,Nantes,3,6789012345,client9@example.com,es_ES
+Tommy Hilfiger,10,C010,'707 Rue de la Mode',75010,Montpellier,1,7890123456,client10@example.com,fr_FR
+Levi's,11,C011,'808 Avenue du Denim',75011,Rennes,2,8901234567,client11@example.com,en_US
+Dior,12,C012,'909 Boulevard de la Haute Couture',75012,Limoges,3,9012345678,client12@example.com,es_ES
+Versace,13,C013,'1010 Rue de l'Élégance',75013,Clermont-Ferrand,1,0123456789,client13@example.com,fr_FR
+Adolfo Dominguez,14,C014,'1111 Avenue de la Style',75014,Avignon,2,1234567890,client14@example.com,en_US
+Ralph Lauren,15,C015,'1212 Rue du Chic',75015,Grenoble,3,2345678901,client15@example.com,es_ES
+Balenciaga,16,C016,'1313 Boulevard de la Mode',75016,Metz,1,3456789012,client16@example.com,fr_FR
+Armani,17,C017,'1414 Rue de l'Élégance',75017,Toulon,2,4567890123,client17@example.com,en_US
+Puma,18,C018,'1515 Avenue Sportive',75018,Besançon,3,5678901234,client18@example.com,es_ES
+Under Armour,19,C019,'1616 Rue des Performances',75019,Dijon,1,6789012345,client19@example.com,fr_FR
+Fendi,20,C020,'1717 Avenue de la Luxe',75020,Perpignan,2,7890123456,client20@example.com,en_US
+Diesel,21,C021,'1818 Rue du Denim',75021,Cannes,3,8901234567,client21@example.com,es_ES
+Burberry,22,C022,'1919 Boulevard Chic',75022,Colmar,1,9012345678,client22@example.com,fr_FR
+Supreme,23,C023,'2020 Rue du Streetwear',75023,Aix-en-Provence,2,0123456789,client23@example.com,en_US
+GAP,24,C024,'2121 Avenue Fashion',75024,Mulhouse,3,1234567890,client24@example.com,es_ES
+Hugo Boss,25,C025,'2222 Rue du Chic',75025,Nîmes,1,2345678901,client25@example.com,fr_FR
+Balmain,26,C026,'2323 Boulevard Luxe',75026,Angers,2,3456789012,client26@example.com,en_US
+Yves Saint Laurent,27,C027,'2424 Avenue de la Mode',75027,Caen,3,4567890123,client27@example.com,es_ES
+Wrangler,28,C028,'2525 Rue du Denim',75028,Annecy,1,5678901234,client28@example.com,fr_FR
+Columbia,29,C029,'2626 Avenue Sportive',75029,Poitiers,2,6789012345,client29@example.com,en_US
+Fila,30,C030,'2727 Rue des Performances',75030,Reims,3,7890123456,client30@example.com,es_ES

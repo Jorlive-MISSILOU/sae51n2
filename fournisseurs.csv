@@ -1,0 +1,6 @@
+nom,fournisseur,code_fournisseur,address,zip,town,fk_pays,phone,email,default_lang
+Fournisseur1,1,F001,'123 Rue des Fournisseurs',75001,Paris,1,0123456789,Fournisseur1@example.com,fr_FR
+Fournisseur2,2,F002,'456 Avenue des Approvisionnements',75002,Marseille,2,0987654321,Fournisseur2@example.com,en_US
+Fournisseur3,3,F003,'789 Boulevard des Livraisons',75003,Lyon,3,9876543210,Fournisseur3@example.com,es_ES
+Fournisseur4,4,F004,'101 Rue des Importations',75004,Nice,1,1234567890,Fournisseur4@example.com,fr_FR
+Fournisseur5,5,F005,'202 Avenue des Stocks',75005,Toulouse,2,2345678901,Fournisseur5@example.com,en_US

@@ -21,7 +21,6 @@ RUN apt-get install -y libpng-dev && \
     docker-php-ext-install -j$(nproc) calendar && \
     docker-php-ext-install mysqli
 
-
 # Active les modules Apache nécessaires pour Dolibarr
 RUN a2enmod rewrite
 
@@ -30,23 +29,19 @@ WORKDIR /var/www/html
 RUN wget https://downloads.sourceforge.net/project/dolibarr/Dolibarr%20ERP-CRM/18.0.3/dolibarr-18.0.3.tgz && \
     tar -zxvf dolibarr-18.0.3.tgz --strip-components=1 && \
     rm dolibarr-18.0.3.tgz && \
-    # Le repertoire des documents
     mkdir -p /var/www/documents && \
     chmod 777 /var/www/documents && \
     chown www-data:www-data /var/www/documents
 
-RUN mkdir -p htdocs/conf/ && \
-    touch htdocs/conf/conf.php && \
-    chmod 777 htdocs/conf/conf.php && \
-    chown www-data:www-data htdocs/conf/conf.php
-
 # Copie du fichier conf.php
-COPY dolibarr/conf.php htdocs/conf/conf.php
-RUN chmod 777 htdocs/conf/conf.php
+COPY dolibarr/conf.php htdocs/
+COPY dolibarr/conf.php htdocs/conf/
+
+RUN chmod 777 htdocs/conf.php && chmod 777 htdocs/conf/conf.php
 
 # Désactive la protection CSRF
-#RUN sed -i 's/define\(CSRFCHECK_WITH_TOKEN, true\);/\/\/define\(CSRFCHECK_WITH_TOKEN, true\);/g' htdocs/main.inc.php
- 
+RUN sed -i 's/define\(CSRFCHECK_WITH_TOKEN, true\);/\/\/define\(CSRFCHECK_WITH_TOKEN, true\);/g' htdocs/main.inc.php
+
 # Copie la configuration personnalisée
 COPY dolibarr/dolibarr.conf /etc/apache2/sites-available/000-default.conf
 

@@ -6,21 +6,22 @@ services:
     build:
       context: .
       dockerfile: mysql/Dockerfile
-    volumes:
-      - ./doli_mysql:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=dolibarr
       - MYSQL_DATABASE=dolibarr_db
       - MYSQL_USER=dolibarr
       - MYSQL_PASSWORD=dolibarr
+    command: --local-infile=1
+    volumes:
+      - ./doli_mysql:/var/lib/mysql
+    networks:
+      - mynetwork
 
   dolibarr:
     image: sae51n2_dolibarr
     build:
       context: .
       dockerfile: dolibarr/Dockerfile
-    volumes:
-      - doli_docs:/var/www/documents
     environment:
       - DOLI_ADMIN=dolibarr
       - DOLI_ADMIN_PASSWORD=dolibarr
@@ -30,9 +31,17 @@ services:
       - DOLI_DB_PASSWORD=dolibarr
     ports:
       - "8080:80"
+    networks:
+      - mynetwork
     dns:
       - 8.8.8.8
       - 8.8.4.4
+    volumes:
+      - doli_docs:/var/www/documents
+
+networks:
+  mynetwork:
+    driver: bridge
 
 volumes:
   doli_docs:

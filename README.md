@@ -1,25 +1,9 @@
 # sae51n2
 
-# Dockerfile
+# lA TABLES DES CLIENTs:
+llx_societe
 
-conf.php
-<?php
-$dolibarr_main_db_type = 'mysqli';
-$dolibarr_main_db_host = 'localhost';
-$dolibarr_main_db_port = '3306';
-$dolibarr_main_db_user = 'dolibarr';
-$dolibarr_main_db_pass = 'dolibarr';
-$dolibarr_main_db_name = 'dolibarr_db';
-?>
+# la tables des fourcisseurs
 
-/* $conf_file = 'htdocs/conf/conf.php';
 
-// Vérifie si le fichier conf.php existe
-if (!file_exists($conf_file)) {
-    // Redirige vers la page d'authentification une fois l'installation terminée
-    header('Location: http://localhost:8080/admin/index.php');
-    exit;
-}
-
-// Si le fichier conf.php existe, incluez-le
-include_once($conf_file); */
+Attention, une fois l'installation terminée, les outils d'installation/migration doivent être désactivés en ajoutant un fichier install.lock dans le répertoire /var/www/documents. L'absence de ce fichier représente une faille de sécurité. Cet avertissement de sécurité restera actif tant que la vulnérabilité sera présente.
