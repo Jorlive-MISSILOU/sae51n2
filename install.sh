@@ -2,7 +2,8 @@
 
 # Construction des images et lancement des conteneurs
 ./build.sh
-sleep 60
+
+#sleep 60
 # Import des données
 ./import_csv.sh
 

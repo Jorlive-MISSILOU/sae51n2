@@ -11,6 +11,7 @@ ENV MYSQL_PASSWORD=dolibarr
 
 # Copier le script SQL d'initialisation dans le conteneur
 COPY mysql/init.sql /docker-entrypoint-initdb.d/
+RUN chown 1000:1000 /var/lib/mysql
 
 # Expose le port
 EXPOSE 3306

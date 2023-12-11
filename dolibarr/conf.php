@@ -1,5 +1,4 @@
 <?php
-
 $dolibarr_main_url_root = 'http://localhost';
 $dolibarr_main_document_root = '/var/www/html/htdocs';
 $dolibarr_main_data_root = '/var/www/documents';
@@ -11,9 +10,10 @@ $dolibarr_main_db_pass = 'dolibarr';
 $dolibarr_main_db_type = 'mysqli';
 $dolibarr_main_db_character_set = 'utf8';
 $dolibarr_main_db_collation = 'utf8_unicode_ci';
-$dolibarr_main_db_readonly = 0;
+$dolibarr_main_db_readonly = '0';
 $dolibarr_main_lang='fr_FR';
 $dolibarr_main_authentication = 'dolibarr';
+$dolibarr_modules_enabled = array('thirdparty', 'supplier');
 
 $dolibarr_main_force_https = '0';
 $dolibarr_main_prod = '1';
@@ -28,4 +28,4 @@ $dolibarr_main_db_prefix = 'llx_';
 $dolibarr_main_limit_users = '0';
 $dolibarr_strict_mode = '0';
 $dolibarr_allow_download_external_modules = '0';
-$dolibarr_main_module_partners_enabled = true;
+$dolibarr_main_module_partners_enabled = 'true';

@@ -37,7 +37,7 @@ services:
       - 8.8.8.8
       - 8.8.4.4
     volumes:
-      - doli_docs:/var/www/documents
+      - doli_docs:/var/www/html
 
 networks:
   mynetwork:

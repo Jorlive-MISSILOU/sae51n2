@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Import de données csv
-mysql --local-infile=1 -h 172.19.0.3 -P 3306 -u dolibarr -p'dolibarr' < import.sql
+mysql --local-infile=1 -h 172.20.0.2 -P 3306 -u dolibarr -p'dolibarr' < import.sql
 
 # Vérification
 if [ $? -eq 0 ]; then

@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Sauvegarde de la base de données MySQL
-cp doli_mysql backup/mysql_backup
+cp doli_mysql backup/mysql_backup -r
 
 # Vérification
 if [ $? -eq 0 ]; then

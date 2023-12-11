@@ -27,15 +27,15 @@ RUN a2enmod rewrite
 # Installe Dolibarr
 WORKDIR /var/www/html
 RUN wget https://downloads.sourceforge.net/project/dolibarr/Dolibarr%20ERP-CRM/18.0.3/dolibarr-18.0.3.tgz && \
-    tar -zxvf dolibarr-18.0.3.tgz --strip-components=1 && \
+    tar -zxvf dolibarr-18.0.3.tgz --strip-components=1 &&\
     rm dolibarr-18.0.3.tgz && \
-    mkdir -p /var/www/documents && \
-    chmod 777 /var/www/documents && \
+    mkdir -p /var/www/documents &&\
+    chmod 777 /var/www/documents &&\
     chown www-data:www-data /var/www/documents
 
 # Copie du fichier conf.php
 COPY dolibarr/conf.php htdocs/
-COPY dolibarr/conf.php htdocs/conf/
+COPY dolibarr/conf.php htdocs/conf/conf.php
 
 RUN chmod 777 htdocs/conf.php && chmod 777 htdocs/conf/conf.php
 

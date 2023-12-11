@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #Construction des images
 docker-compose build
 
